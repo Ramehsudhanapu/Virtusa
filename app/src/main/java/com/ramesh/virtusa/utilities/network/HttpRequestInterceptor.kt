@@ -1,4 +1,4 @@
-package com.sipc.virtusa.utilities.network
+package com.ramesh.virtusa.utilities.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

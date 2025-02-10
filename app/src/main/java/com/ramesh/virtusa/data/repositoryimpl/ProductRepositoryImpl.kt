@@ -4,6 +4,7 @@ import com.ramesh.virtusa.data.model.Product
 import com.ramesh.virtusa.data.model.ProductResponse
 import com.ramesh.virtusa.data.network.remote.ProductDataAPIService
 import com.ramesh.virtusa.domain.repository.ProductRepository
+import com.ramesh.virtusa.utilities.common.AppStrings
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class ProductRepositoryImpl  @Inject constructor(private val apiService: Product
         try {
             emit(apiService.getAllProducts(categoryName).map { it })  // Replace with actual API call and data processing
         }catch( e:Exception ) {
-            emit(listOf())  // Handle the error here
+            throw Exception(AppStrings.UNABLE_TO_FETCH_PRODUCTS)
         }
 
     }
@@ -27,7 +28,7 @@ class ProductRepositoryImpl  @Inject constructor(private val apiService: Product
             emit(apiService.getProductById(id))
 
         } catch (E: Exception) {
-            emit(Product())
+            throw Exception(AppStrings.UNABLE_TO_FETCH_PRODUCTS)
 
         }
     }

@@ -54,7 +54,6 @@ import kotlin.text.toIntOrNull
 @Composable
 fun ProductListScreen(
     categoryName: String?,
-    modifier: Modifier = Modifier,
     navController: (Int) -> Unit,
     viewModel: GetProductsByCategoryNameViewModel = hiltViewModel()
 ) {
@@ -86,12 +85,10 @@ fun ProductListScreen(
     )
     {
         if (state.value is UIState.Loading) {
-            CircularProgressIndicator(modifier=Modifier.align(Alignment.Center))
-        }
-        else
-        {
-            when(val value=state.value){
-                is UIState.Success-> {
+            CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+        } else {
+            when (val value = state.value) {
+                is UIState.Success -> {
 
                     val product = value.data
                     ProductListItem(
@@ -140,7 +137,7 @@ fun ProductListItem(product: List<ProductResponse>, modifier: Modifier, onclick:
 
                     ProductItem(
                         product = product,
-                        onclick=onclick,
+                        onclick = onclick,
                         modifier = Modifier
                             .fillMaxSize()
                             .wrapContentSize(Alignment.Center)
@@ -154,10 +151,10 @@ fun ProductListItem(product: List<ProductResponse>, modifier: Modifier, onclick:
 }
 
 @Composable
-fun ProductItem(product: ProductResponse, modifier: Modifier,onclick: (Int) -> Unit) {
+fun ProductItem(product: ProductResponse, modifier: Modifier, onclick: (Int) -> Unit) {
     Card(
         shape = RoundedCornerShape(8.dp),
-        onClick = { onclick(product.id?:0)},
+        onClick = { onclick(product.id ?: 0) },
         colors = CardDefaults.cardColors(
             containerColor = Color.White
         ),
@@ -211,7 +208,7 @@ fun ProductItem(product: ProductResponse, modifier: Modifier,onclick: (Int) -> U
                     color = Color.Black
                 )
                 Text(
-                    text = product.price.toString()?:"",
+                    text ="Rs."+ product.price.toString(),
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodySmall,
@@ -225,6 +222,7 @@ fun ProductItem(product: ProductResponse, modifier: Modifier,onclick: (Int) -> U
 
     }
 }
+
 val ProductResponseListSaver: Saver<MutableList<ProductResponse>, *> =
     listSaver(
         save = { it.map { productResponse -> productResponse.id.toString() } },

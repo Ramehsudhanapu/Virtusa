@@ -6,7 +6,7 @@ import com.ramesh.virtusa.BuildConfig
 import com.ramesh.virtusa.data.network.remote.CategoryAPIService
 import com.ramesh.virtusa.data.network.remote.ProductDataAPIService
 import com.ramesh.virtusa.di.RepositoryBindingModule.RepositoryModule.Companion.BASE_URL
-import com.sipc.virtusa.utilities.network.HttpRequestInterceptor
+import com.ramesh.virtusa.utilities.network.HttpRequestInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

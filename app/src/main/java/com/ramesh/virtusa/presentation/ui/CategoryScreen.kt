@@ -55,7 +55,14 @@ fun CategoryScreen(
                     )
                 }
                 is UIState.Error -> {
-                    Text(text = uiState.message)
+                    Text(
+                        text = uiState.message,
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                            .padding(16.dp),
+                        textAlign = TextAlign.Center,
+                        color = Color.Red // Change color to indicate error
+                    )
                 }
                 else -> {
                     Text(text = "Unknown state")

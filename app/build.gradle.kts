@@ -80,7 +80,8 @@ android {
         api("androidx.compose.material3:material3")
         api("androidx.compose.material3:material3-window-size-class")
         api(MyDependency.navigation_compose)
-
+        implementation("com.google.firebase:firebase-crashlytics-buildtools:3.0.3")
+        implementation("androidx.glance:glance:1.1.1")
 
 
         // TESTING

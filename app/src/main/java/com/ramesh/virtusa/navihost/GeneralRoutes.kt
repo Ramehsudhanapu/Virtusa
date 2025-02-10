@@ -1,4 +1,4 @@
-package com.ramesh.virtusa.utilities
+package com.ramesh.virtusa.navihost
 
 sealed  class GeneralRoutes(val  route:String)  {
     object Category: GeneralRoutes("categoryScreen")

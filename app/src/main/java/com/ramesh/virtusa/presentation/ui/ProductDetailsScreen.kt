@@ -106,7 +106,7 @@ fun TitleProduct(product: Product) {
             maxLines = 2
         )
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = product.price.toString() ?: "")
+        Text(text = "Rs."+product.price.toString() ?: "")
         Spacer(modifier = Modifier.height(16.dp))
         Text(text = product.description ?: "")
     }

@@ -1,4 +1,4 @@
-package com.ramesh.virtusa.ui
+package com.ramesh.virtusa.navihost
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -8,7 +8,6 @@ import androidx.navigation.navArgument
 import com.ramesh.virtusa.presentation.ui.CategoryScreen
 import com.ramesh.virtusa.presentation.ui.ProductDetailsScreen
 import com.ramesh.virtusa.presentation.ui.ProductListScreen
-import com.ramesh.virtusa.utilities.GeneralRoutes
 
 
 @Composable
