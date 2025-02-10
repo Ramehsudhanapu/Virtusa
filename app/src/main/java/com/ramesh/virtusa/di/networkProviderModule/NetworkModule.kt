@@ -1,11 +1,11 @@
-package com.ramesh.virtusa.di.NetworkProviderModule
+package com.ramesh.virtusa.di.networkProviderModule
 import android.content.Context
 import com.google.gson.GsonBuilder
 import com.ramesh.virtusa.BuildConfig
 
 import com.ramesh.virtusa.data.network.remote.CategoryAPIService
 import com.ramesh.virtusa.data.network.remote.ProductDataAPIService
-import com.ramesh.virtusa.di.RepositoryBindingModule.RepositoryModule.Companion.BASE_URL
+import com.ramesh.virtusa.di.repositoryBindingModule.RepositoryModule.Companion.BASE_URL
 import com.ramesh.virtusa.utilities.network.HttpRequestInterceptor
 import dagger.Module
 import dagger.Provides

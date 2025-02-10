@@ -1,4 +1,4 @@
-package com.ramesh.virtusa.di.RepositoryBindingModule
+package com.ramesh.virtusa.di.repositoryBindingModule
 
 
 import com.ramesh.virtusa.data.repositoryimpl.CategoryRepositoryImpl

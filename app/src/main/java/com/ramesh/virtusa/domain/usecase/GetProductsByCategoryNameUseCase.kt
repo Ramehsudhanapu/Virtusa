@@ -7,8 +7,8 @@ import com.ramesh.virtusa.presentation.interactor.BaseUseCase
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetProductsByCategoryNameUseCase  @Inject constructor(private val productRepository:
-                                                            ProductRepository
+class GetProductsByCategoryNameUseCase  @Inject constructor(
+    private val productRepository: ProductRepository
 ) : BaseUseCase<String, Flow<List<ProductResponse>>>()
 {
     override suspend fun execute(params: String): Flow<List<ProductResponse>> {

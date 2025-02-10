@@ -5,7 +5,8 @@ import com.ramesh.virtusa.presentation.interactor.BaseUseCase
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetAllCategoryUseCase @Inject constructor(private val categoryRepository: CategoryRepository) :
+class GetAllCategoryUseCase @Inject constructor(
+    private val categoryRepository: CategoryRepository) :
     BaseUseCase<Unit, Flow<List<String>>>() {
     override suspend fun execute(params: Unit): Flow<List<String>>
     {
