@@ -1,4 +1,4 @@
-package com.ramesh.virtusa.di.appModule
+package com.ramesh.virtusa
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class CategoryRepositoryImpl @Inject constructor(private val apiService: CategoryAPIService) :
+class CategoryRepositoryImpl @Inject constructor(private val apiService: CategoryAPIService,) :
     CategoryRepository {
     override suspend fun getAllCategories(): Flow<List<String>> = flow {
         try {

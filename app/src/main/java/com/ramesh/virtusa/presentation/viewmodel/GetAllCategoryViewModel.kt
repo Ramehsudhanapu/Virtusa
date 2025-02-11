@@ -1,6 +1,5 @@
 package com.ramesh.virtusa.presentation.viewmodel
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ramesh.virtusa.domain.usecase.GetAllCategoryUseCase
 import com.ramesh.virtusa.presentation.state.UIState
@@ -19,7 +18,9 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class GetAllCategoryViewModel @Inject constructor(private val allCategoryUseCase: GetAllCategoryUseCase) :
+class GetAllCategoryViewModel @Inject constructor(private val allCategoryUseCase: GetAllCategoryUseCase
+
+   ) :
     BaseViewModel() {
 
     private val _uiState = MutableStateFlow<UIState<List<String>>>(UIState.Loading)
