@@ -1,4 +1,5 @@
 package com.ramesh.virtusa.navihost
+
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -40,7 +41,7 @@ fun NavigationApp() {
                 navController = { productId ->
                     navController.navigate(GeneralRoutes.Details.createDetailRoute(productId))
 
-        })
+                })
         }
         composable(
             route = GeneralRoutes.Details.route,

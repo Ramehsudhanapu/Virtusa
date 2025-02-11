@@ -12,7 +12,7 @@ class CategoryRepositoryImpl @Inject constructor(private val apiService: Categor
     CategoryRepository {
     override suspend fun getAllCategories(): Flow<List<String>> = flow {
         try {
-             emit(apiService.getAllCategories().map { it })  // Replace with actual API call and data processing
+             emit(apiService.getAllCategories().map { it })
         }catch( e:Exception ) {
             throw Exception(AppStrings.UNABLE_TO_FETCH_PRODUCTS)
         }

@@ -11,18 +11,18 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class ProductRepositoryImpl  @Inject constructor(private val apiService: ProductDataAPIService) :
+class ProductRepositoryImpl @Inject constructor(private val apiService: ProductDataAPIService) :
     ProductRepository {
-    override suspend fun getAllProducts(categoryName: String): Flow<List<ProductResponse>>  = flow{
+    override suspend fun getAllProducts(categoryName: String): Flow<List<ProductResponse>> = flow {
         try {
-            emit(apiService.getAllProducts(categoryName).map { it })  // Replace with actual API call and data processing
-        }catch( e:Exception ) {
+            emit(apiService.getAllProducts(categoryName).map { it })
+        } catch (e: Exception) {
             throw Exception(AppStrings.UNABLE_TO_FETCH_PRODUCTS)
         }
 
     }
 
-    override suspend fun getProductById(id: Int): Flow<Product>  = flow{
+    override suspend fun getProductById(id: Int): Flow<Product> = flow {
 
         try {
             emit(apiService.getProductById(id))
