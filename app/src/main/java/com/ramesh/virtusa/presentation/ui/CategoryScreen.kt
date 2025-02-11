@@ -40,6 +40,7 @@ fun CategoryScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White),
+        contentAlignment = Alignment.Center
 
 
     ) {
